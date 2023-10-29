@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                // Add your build commands here
+                sh 'echo "Building the project"'
+                // Example: sh 'mvn clean install'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Add your deployment commands here
+                sh 'echo "Deploying the project"'
+                // Example: sh 'rsync -avz ./target/app.war user@server:/path/to/deployment'
+            }
+        }
+    }
+}
